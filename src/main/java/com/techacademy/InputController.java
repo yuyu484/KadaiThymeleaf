@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class InputController {
 
     @GetMapping("/input")
-    public String getInput(@RequestParam(name = "previous", required = false)String previous,Model model) {
+    public String getInput(@RequestParam(name = "previous", required = false) String previous, Model model) {
         // 入力画面を表示する際に、previousの値をモデルに追加
         if (previous != null) {
             model.addAttribute("previous", previous);
